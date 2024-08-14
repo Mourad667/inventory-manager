@@ -5,6 +5,7 @@ import { firestore } from "@/firebase";
 import { Box, Button, Modal, Stack, TextField, Typography } from "@mui/material";
 import { collection, deleteDoc, doc, getDoc, getDocs, query, setDoc } from "firebase/firestore";
 
+
 export default function Home() {
   const [inventory, setInventory] = useState([])
   const [open, setOpen] = useState(false)
@@ -71,6 +72,9 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
       gap={2}
+      sx={{ // adds background gradient
+        background: "linear-gradient(135deg, #4bb3b7 0%, #5b4bb7 100%)"
+     }}
     >
       <Modal open={open} onClose={handleClose}>
         <Box 
