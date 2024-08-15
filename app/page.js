@@ -83,17 +83,28 @@ export default function Home() {
           left="50%"
           width={400}
           bgcolor="white"
-          border="2px solid #000"
+          // border="2px solid #fff"
+          border="8px groove #fff" // A 3D groove border effect
           boxShadow={24}
           p={4}
           display="flex"
           flexDirection="column"
           gap={3}
           sx={{
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
+            background: 'linear-gradient(135deg, #7dbbfa 0%, #207ad4 100%)', // Blue gradient
           }}
         >
-          <Typography variant="h6">Add Item</Typography>
+          <Typography 
+            variant="h6" 
+            color="#062952" // Set the text color
+            sx={{ 
+              fontWeight: 'bold', // Make the text bold
+              // textShadow: '2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000', // Outline effect
+            }}
+          >
+            Add Item
+          </Typography>
           <Stack width="100%" direction="row" spacing={2}>
             <TextField 
             variant='outlined'
@@ -102,6 +113,20 @@ export default function Home() {
             onChange={(e) => {
                 setItemName(e.target.value)
               }}
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: '#062952', // Set the outline color
+                  borderWidth: '2px', // Set the border width (bolder outline)
+                },
+                '&:hover fieldset': {
+                  borderColor: '#3a5a8a', // Change outline color on hover
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: '#3a5a8a', // Change outline color when focused
+                },
+              },
+            }}
             />
             <Button 
               variant="outlined" 
@@ -109,6 +134,13 @@ export default function Home() {
               addItem(itemName)
               setItemName('')
               handleClose()
+            }}
+            sx={{
+              bgcolor: '#0c3769', // A dark blue color
+              color: '#fff', // Set text color to white for better contrast
+              '&:hover': {
+                bgcolor: '#63a2eb', // Lighter shade for hover effect
+              },
             }}
             >
               Add
@@ -122,10 +154,10 @@ export default function Home() {
           handleOpen()
         }}
         sx={{
-          bgcolor: '#0c3769', // A warm coral color
+          bgcolor: '#0c3769', // A dark blue color
           color: '#fff', // White text for contrast
           '&:hover': {
-            bgcolor: '#63a2eb', // Darker shade for hover effect
+            bgcolor: '#63a2eb', // Lighter shade for hover effect
           },
         }}
       >
