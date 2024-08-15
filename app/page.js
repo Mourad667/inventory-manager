@@ -177,7 +177,7 @@ export default function Home() {
             color="#333" 
             sx={{ 
               fontFamily: 'Indie Flower, cursive' // Optional: makes the font bold
-      }}>
+            }}>
             Inventory Items
           </Typography>
         </Box>
@@ -197,11 +197,18 @@ export default function Home() {
               justifyContent="space-between"
               bgcolor="#f0f0f0"
               padding={5}
+              sx={{
+                background: 'linear-gradient(90deg, #d5d4d6 0%, #c1dee8 100%)', // Blue gradient
+              }}
             >
-              <Typography variant='h3' color="#333" textAlign="center">
+              <Typography variant='h3' color="#333" textAlign="center" sx={{ 
+              fontFamily: 'Indie Flower, cursive' // Optional: makes the font bold
+            }}>
                 {name.charAt(0).toUpperCase() + name.slice(1)}
               </Typography>
-              <Typography variant='h3' color="#333" textAlign="center">
+              <Typography variant='h3' color="#333" textAlign="center" sx={{ 
+              fontFamily: 'Indie Flower, cursive' // Optional: makes the font bold
+            }}>
                 {quantity}
               </Typography>
               <Stack direction="row" spacing={2}>
@@ -210,6 +217,13 @@ export default function Home() {
                 onClick={() => {
                   addItem(name)
                 }}
+                sx={{
+                  bgcolor: '#0c3769', // A dark blue color
+                  color: '#fff', // White text for contrast
+                  '&:hover': {
+                    bgcolor: '#63a2eb', // Lighter shade for hover effect
+                  },
+                }}
               >
                 Add
                 </Button>
@@ -217,6 +231,13 @@ export default function Home() {
                 variant="contained"
                 onClick={() => {
                   removeItem(name)
+                }}
+                sx={{
+                  // bgcolor: '#0c3769', // A dark blue color
+                  color: '#fff', // White text for contrast
+                  '&:hover': {
+                    bgcolor: '#63a2eb', // Lighter shade for hover effect
+                  },
                 }}
               >
                 Remove
