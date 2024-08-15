@@ -74,7 +74,7 @@ export default function Home() {
       alignItems="center"
       gap={2}
     sx={{
-      backgroundImage: "url('/image2 copy.jpg')", // Replace with your image path
+      backgroundImage: "url('/image2_copy.jpg')", // Replace with your image path
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}
