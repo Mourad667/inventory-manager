@@ -121,6 +121,13 @@ export default function Home() {
         onClick={() => {
           handleOpen()
         }}
+        sx={{
+          bgcolor: '#0c3769', // A warm coral color
+          color: '#fff', // White text for contrast
+          '&:hover': {
+            bgcolor: '#63a2eb', // Darker shade for hover effect
+          },
+        }}
       >
         Add New Item
       </Button>
@@ -133,7 +140,12 @@ export default function Home() {
           alignItems="center"
           justifyContent="center"
         >
-          <Typography variant = "h2" color="#333">
+          <Typography 
+            variant = "h2" 
+            color="#333" 
+            sx={{ 
+              fontFamily: 'Indie Flower, cursive' // Optional: makes the font bold
+      }}>
             Inventory Items
           </Typography>
         </Box>
