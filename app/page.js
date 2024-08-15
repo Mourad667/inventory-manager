@@ -7,7 +7,7 @@ export default function LandingPage() {
   const router = useRouter();
 
   const navigateToMainPage = () => {
-    router.push("/inventory"); // Navigates to the main page
+    router.push("/inventory"); // Navigates to the main page in invetory
   };
 
   return (
