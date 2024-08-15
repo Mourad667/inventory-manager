@@ -73,9 +73,11 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
       gap={2}
-      sx={{ // adds background gradient
-        background: "linear-gradient(135deg, #4bb3b7 0%, #5b4bb7 100%)"
-     }}
+    sx={{
+      backgroundImage: "url('/image2 copy.jpg')", // Replace with your image path
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
     >
       <Modal open={open} onClose={handleClose}>
         <Box 
@@ -93,12 +95,12 @@ export default function Home() {
           gap={3}
           sx={{
             transform: 'translate(-50%, -50%)',
-            background: 'linear-gradient(135deg, #7dbbfa 0%, #207ad4 100%)', // Blue gradient
+            background: 'linear-gradient(135deg, #d44ef5 0%, #7dbbfa 100%)', // Blue gradient
           }}
         >
           <Typography 
             variant="h6" 
-            color="#062952" // Set the text color
+            color="#fff" // Set the text color
             sx={{ 
               fontWeight: 'bold', // Make the text bold
               // textShadow: '2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000', // Outline effect
@@ -137,7 +139,7 @@ export default function Home() {
               handleClose()
             }}
             sx={{
-              bgcolor: '#0c3769', // A dark blue color
+              bgcolor: '#d44ef5', // A dark blue color
               color: '#fff', // Set text color to white for better contrast
               '&:hover': {
                 bgcolor: '#63a2eb', // Lighter shade for hover effect
@@ -169,13 +171,16 @@ export default function Home() {
           width="800px"
           height="100px"
           display="flex"
-          bgcolor="#ADD8E6"
+          bgcolor="#dc7af5"
           alignItems="center"
           justifyContent="center"
+          // sx={{
+          //   background: 'linear-gradient(90deg, #ead8ed 0%, #d44ef5 100%)', // Blue gradient
+          // }}
         >
           <Typography 
             variant = "h2" 
-            color="#333" 
+            color="#080808" 
             sx={{ 
               fontFamily: 'Indie Flower, cursive' // Optional: makes the font bold
             }}>
@@ -199,7 +204,7 @@ export default function Home() {
               bgcolor="#f0f0f0"
               padding={5}
               sx={{
-                background: 'linear-gradient(90deg, #d5d4d6 0%, #c1dee8 100%)', // Blue gradient
+                background: 'linear-gradient(90deg, #a4c2fc 0%, #ead8ed 100%)', // Blue gradient
               }}
             >
               <Typography variant='h3' color="#333" textAlign="center" sx={{ 
@@ -219,7 +224,7 @@ export default function Home() {
                   addItem(name)
                 }}
                 sx={{
-                  bgcolor: '#0c3769', // A dark blue color
+                  bgcolor: '#d44ef5', // A dark blue color
                   color: '#fff', // White text for contrast
                   '&:hover': {
                     bgcolor: '#63a2eb', // Lighter shade for hover effect
@@ -234,7 +239,7 @@ export default function Home() {
                   removeItem(name)
                 }}
                 sx={{
-                  // bgcolor: '#0c3769', // A dark blue color
+                  bgcolor: '#0E55E7', // A dark blue color
                   color: '#fff', // White text for contrast
                   '&:hover': {
                     bgcolor: '#63a2eb', // Lighter shade for hover effect
