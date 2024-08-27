@@ -7,8 +7,8 @@ import Image from 'next/image'; // For background images or logos
 export default function LandingPage() {
   const router = useRouter();
 
-  const navigateToMainPage = () => {
-    router.push("/inventory"); // Navigates to the main page in inventory
+  const navigateToLogin = () => {
+    router.push("/login"); // Navigates to the login page
   };
 
   return (
@@ -69,7 +69,7 @@ export default function LandingPage() {
 
       <Button 
         variant="contained" 
-        onClick={navigateToMainPage}
+        onClick={navigateToLogin}
         sx={{
           bgcolor: '#fff', 
           color: '#0c3769',
